@@ -3,6 +3,8 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
+require('dotenv').config()
+
 //middleware
 app.use(cors());
 app.use(express.json()); //req.body
@@ -115,6 +117,6 @@ app.put('/move-to-friends-list/:person_id', async (req, res) => {
     
 })
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
     console.log("Server is running on port 5000");
 });
