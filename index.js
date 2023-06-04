@@ -3,7 +3,8 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
-require('dotenv').config()
+require('dotenv').config();
+console.log(process.env) 
 
 //middleware
 app.use(cors());

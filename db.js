@@ -7,8 +7,10 @@ const pool = new Pool({
 pool.connect((err) => {
     if (err) {
         console.error('Error: ', err.message)
+    } else {
+        console.log("Connect to PostgreSQL successfully!")
     }
-    console.log("Connect to PostgreSQL successfully!")
+    
 })
 
 
