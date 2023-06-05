@@ -1,4 +1,4 @@
-const pool = require("./../database/index");
+const pool = require("./../db/index");
 
 const listsController = {
     testRoute: async (req, res) => {
