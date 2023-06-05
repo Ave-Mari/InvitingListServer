@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser")
 const cors = require("cors");
 
 require('dotenv').config();
 
 //middleware
 app.use(cors());
-app.use(express.json()); //req.body
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const listsRouter = require('./routes/lists.router');
 
