@@ -4,7 +4,6 @@ const cors = require("cors");
 const pool = require("./db");
 
 require('dotenv').config();
-console.log(process.env) 
 
 //middleware
 app.use(cors());
